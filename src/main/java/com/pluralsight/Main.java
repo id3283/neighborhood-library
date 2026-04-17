@@ -73,7 +73,6 @@ public class Main {
         System.out.println(prompt);
         String userSelection = inputScanner.nextLine();
 
-
         switch (userSelection) {
             case "1":
                 // check out book
