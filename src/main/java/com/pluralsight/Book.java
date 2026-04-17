@@ -15,4 +15,8 @@ public class Book {
         this.checkedOutTo = checkedOutTo;
     }
 
+    public void checkOut(String reader) {
+        this.isCheckedOut = true;
+        this.checkedOutTo = reader;
+    }
 }
