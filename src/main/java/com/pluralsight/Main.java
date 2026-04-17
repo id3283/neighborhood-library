@@ -20,7 +20,9 @@ public class Main {
         books[8] = new Book(8, "978-0000000009", "The Lord of the Rings", false, "");
         books[9] = new Book(9, "978-0000000010", "The Alchemist", false, "");
 
-        String mainPrompt = """
+        boolean keepGoing = true;
+        do {
+            String mainPrompt = """
             Main Menu
         1. Show available books
         2. Show checked out books
@@ -28,24 +30,26 @@ public class Main {
         
         Please enter your selection.
         """;
-        System.out.println(mainPrompt);
-        String userSelection = inputScanner.nextLine();
+            System.out.println(mainPrompt);
+            String userSelection = inputScanner.nextLine();
 
-        switch (userSelection) {
-            case "1":
-                // available book menu
-                showAvailableMenu(books);
-                break;
-            case "2":
-                // checked out books menu
-                showCheckedOutMenu();
-                break;
-            case "3":
-                // exit
-                break;
-            default:
-                System.err.println("Invalid selection");
-        }
+            switch (userSelection) {
+                case "1":
+                    // available book menu
+                    showAvailableMenu(books);
+                    break;
+                case "2":
+                    // checked out books menu
+                    showCheckedOutMenu();
+                    break;
+                case "3":
+                    // exit
+                    keepGoing = false;
+                    break;
+                default:
+                    System.err.println("Invalid selection");
+            }
+        } while (keepGoing);
 
     }
 
