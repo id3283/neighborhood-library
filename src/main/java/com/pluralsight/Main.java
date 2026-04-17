@@ -58,8 +58,8 @@ public class Main {
         System.out.println("ID\tISBN\t\tTitle");
         for (Book currentBook : books) {
             if(currentBook.isCheckedOut == false) {
-                System.out.print(currentBook.id + " ");
-                System.out.print(currentBook.isbn + " ");
+                System.out.print(currentBook.id + "\n");
+                System.out.print(currentBook.isbn + "\n");
                 System.out.println(currentBook.title);
             }
         }
@@ -102,9 +102,9 @@ public class Main {
         for (Book currentBook : books) {
 
             if(currentBook.isCheckedOut) {
-                System.out.print(currentBook.id + " ");
-                System.out.print(currentBook.isbn + " ");
-                System.out.println(currentBook.title);
+                System.out.print(currentBook.id + "\t");
+                System.out.print(currentBook.isbn + "\t");
+                System.out.print(currentBook.title + "\t");
                 System.out.println(currentBook.checkedOutTo);
             }
         }
@@ -117,7 +117,6 @@ public class Main {
         System.out.println();
         System.out.println(prompt);
         String userSelection = inputScanner.nextLine();
-
 
         switch (userSelection) {
             case "1":
